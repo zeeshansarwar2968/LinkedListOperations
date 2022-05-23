@@ -11,11 +11,11 @@ namespace LinkedListOperations
             //UseCase 1 : Append the numbers into a list
             Operations obj = new Operations();
             //Insertion Operation
-            obj.Append(56);
-            obj.Append(30);
-            obj.Append(70);
+            obj.InsertFront(70);
+            obj.InsertFront(30);
+            obj.InsertFront(56);
             //Display Operation
-            //Console.WriteLine("*****Appending*****");
+            Console.WriteLine("*****Insertion at First*****");
             obj.Display();
 
             Console.ReadKey();

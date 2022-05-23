@@ -28,12 +28,12 @@ namespace LinkedListOperations
         }
 
         //Creating a method to insert at the front of the list 
-        public void InsertFront(int new_data)
+        public void InsertFront(int newData)
         {
-            Node new_node = new Node(new_data);
-            new_node.next = this.head;
-            this.head = new_node;
-            Console.WriteLine("Inserted the list in front " + new_node.data);
+            Node newNode = new Node(newData);
+            newNode.next = this.head;
+            this.head = newNode;
+            Console.WriteLine("Inserted the list in front " + newNode.data);
         }
 
         public Node GetLastNode()
@@ -83,7 +83,7 @@ namespace LinkedListOperations
             {
                 while (temp != null)
                 {
-                    Console.WriteLine(" " + temp.data + " ");
+                    Console.Write( temp.data + " -> ");
                     temp = temp.next;
                 }
             }
