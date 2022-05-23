@@ -14,10 +14,11 @@ namespace LinkedListOperations
             Console.WriteLine("4.Delete the First Element");
             Console.WriteLine("5.Delete the Last Element");
             Console.WriteLine("6.Searching the Element");
+            Console.WriteLine("7.Searching and Inserting an Element");
             Console.WriteLine("");
 
 
-            Console.WriteLine("\t\t\t\t\t Enter 0 to exit");
+            Console.WriteLine("\t\t\t\t\t\tEnter 0 to exit");
             Console.WriteLine("");
 
             //Creating object for Custom Linked list class
@@ -83,6 +84,13 @@ namespace LinkedListOperations
                         obj.InsertLast(30);
                         obj.InsertLast(70);
                         obj.Search(30);
+                        break;
+                    case 7:
+                        obj.InsertLast(56);
+                        obj.InsertLast(30);
+                        obj.InsertLast(70);
+                        obj.Insert(30, 40);
+                        obj.Display();
                         break;
                     default:
                         Console.WriteLine("Please Enter a valid option");
