@@ -27,15 +27,6 @@ namespace LinkedListOperations
             Console.WriteLine("Inserted into list from the end : " + new_node.data);
         }
 
-        //Creating a method to insert at the front of the list 
-        public void InsertFront(int newData)
-        {
-            Node newNode = new Node(newData);
-            newNode.next = this.head;
-            this.head = newNode;
-            Console.WriteLine("Inserted the list in front " + newNode.data);
-        }
-
         public Node GetLastNode()
         {
             Node temp = this.head;
@@ -45,6 +36,17 @@ namespace LinkedListOperations
             }
             return temp;
         }
+
+        //Creating a method to insert at the front of the list 
+        public void InsertFront(int newData)
+        {
+            Node newNode = new Node(newData);
+            newNode.next = this.head;
+            this.head = newNode;
+            Console.WriteLine("Inserted the list in front " + newNode.data);
+        }
+
+        
 
         //Appending a new node
         public void Append(int newData)
@@ -102,7 +104,7 @@ namespace LinkedListOperations
             }
         }
 
-        //Deleting first element
+        //Deleting first element stored in the list
         //Deleting the first node
         public Node DeleteFirst()
         {
@@ -114,10 +116,34 @@ namespace LinkedListOperations
             return this.head;
         }
 
+
+        //Delete Last element stored in the list
+        public Node DeleteLast()
+        {
+            Node newNode = this.head;
+            if (this.head == null)
+            {
+                return null;
+            }
+            if (this.head.next == null)
+            {
+                this.head = null;
+                return null;
+            }
+            while (newNode.next.next != null)
+            {
+                newNode = newNode.next;
+            }
+            newNode.next = null;
+            return newNode;
+
+        }
+
+
         //Display the nodes
         public void Display()
         {
-            Console.WriteLine("**********Displaying Nodes************");
+            Console.WriteLine("---------------Displaying Nodes---------------");
             Node temp = this.head;
             if (temp == null)
             {
