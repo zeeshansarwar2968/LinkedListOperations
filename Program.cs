@@ -13,7 +13,7 @@ namespace LinkedListOperations
             Console.WriteLine("3.Inserting in middle");
             Console.WriteLine("4.Delete the First Element");
             Console.WriteLine("5.Delete the Last Element");
-            //Console.WriteLine("6.Searching the Element");
+            Console.WriteLine("6.Searching the Element");
             Console.WriteLine("");
 
 
@@ -77,6 +77,12 @@ namespace LinkedListOperations
                         obj.InsertLast(70);
                         obj.DeleteLast();
                         obj.Display();
+                        break;
+                    case 6:
+                        obj.InsertLast(56);
+                        obj.InsertLast(30);
+                        obj.InsertLast(70);
+                        obj.Search(30);
                         break;
                     default:
                         Console.WriteLine("Please Enter a valid option");
