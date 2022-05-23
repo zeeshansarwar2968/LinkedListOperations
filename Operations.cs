@@ -24,7 +24,7 @@ namespace LinkedListOperations
                 Node lastNode = GetLastNode();
                 lastNode.next = new_node;
             }
-            Console.WriteLine("Inserted into list from last " + new_node.data);
+            Console.WriteLine("Inserted into list from the end : " + new_node.data);
         }
 
         //Creating a method to insert at the front of the list 
