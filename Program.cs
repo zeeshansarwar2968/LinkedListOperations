@@ -15,6 +15,8 @@ namespace LinkedListOperations
             Console.WriteLine("5.Delete the Last Element");
             Console.WriteLine("6.Searching the Element");
             Console.WriteLine("7.Searching and Inserting an Element");
+            Console.WriteLine("8.Searching and Deleting an Element");
+
             Console.WriteLine("");
 
 
