@@ -12,30 +12,26 @@ namespace LinkedListOperations
         public Node head;
         
         //Creating a method to insert last 
-        public void InsertLast(int new_data)
+        public void InsertLast(int newData)
         {
-            Node new_node = new Node(new_data);
+            Node newNode = new Node(newData);
+            //check if linkedlist is empty 
             if (this.head == null)
             {
-                this.head = new_node;
+                this.head = newNode;
             }
             else
             {
-                Node lastNode = GetLastNode();
-                lastNode.next = new_node;
+                Node temp = head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = newNode;
             }
-            Console.WriteLine("Inserted into list from the end : " + new_node.data);
+            Console.WriteLine("Inserted into list from the end : " + newNode.data);
         }
 
-        public Node GetLastNode()
-        {
-            Node temp = this.head;
-            while (temp.next != null)
-            {
-                temp = temp.next;
-            }
-            return temp;
-        }
 
         //Creating a method to insert at the front of the list 
         public void InsertFront(int newData)
@@ -47,12 +43,11 @@ namespace LinkedListOperations
         }
 
         
-
         //Appending a new node
         public void Append(int newData)
         {
             Node newNode = new Node(newData);
-            //check linkedlist empty 
+            //check if linkedlist is empty 
             if (head == null)
             {
                 head = newNode;
@@ -167,6 +162,46 @@ namespace LinkedListOperations
             temp.next = newNode;
             return (newNode.data);
 
+        }
+
+        //search and delete method
+        public int DeleteInBetween(int data)
+        {
+            Node temp = Search(data);
+            Console.WriteLine("Data {0} has been deleted from linked list", temp.data);
+            temp.next = temp.next.next;
+            int sizeofList = Size();
+            return sizeofList;
+        }
+        public int Size()
+        {
+            int count = 0;
+            Node temp = this.head;
+            while (temp != null)
+            {
+                count++;
+                temp = temp.next;
+            }
+            return count;
+        }
+
+        //sorting
+        public void Sort()
+        {
+            Node i, j;
+            int temp;
+            for (i = this.head; i.next != null; i = i.next)
+            {
+                for (j = i.next; j != null; j = j.next)
+                {
+                    if (i.data > j.data)
+                    {
+                        temp = i.data;
+                        i.data = j.data;
+                        j.data = temp;
+                    }
+                }
+            }
         }
 
 

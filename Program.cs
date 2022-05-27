@@ -54,7 +54,12 @@ namespace LinkedListOperations
                     case 3:
                         obj.InsertLast(56);
                         obj.InsertLast(70);
-                        obj.InsertBetween(2, 30);
+                        obj.InsertLast(31);
+                        obj.InsertLast(47);
+                        obj.InsertLast(91);
+                        obj.InsertLast(63);
+
+                        obj.InsertBetween(5, 30);
                         obj.Display();
                         Console.WriteLine("");
                         break;
@@ -90,6 +95,22 @@ namespace LinkedListOperations
                         obj.InsertLast(30);
                         obj.InsertLast(70);
                         obj.Insert(30, 40);
+                        obj.Display();
+                        break;
+                    case 8:
+                        obj.InsertLast(56);
+                        obj.InsertLast(30);
+                        obj.InsertLast(40);
+                        obj.InsertLast(70);
+                        obj.DeleteInBetween(40);
+                        obj.Display();
+                        break;
+                    case 9:
+                        obj.InsertLast(56);
+                        obj.InsertLast(30);
+                        obj.InsertLast(40);
+                        obj.InsertLast(70);
+                        obj.Sort();
                         obj.Display();
                         break;
                     default:
