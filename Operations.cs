@@ -165,11 +165,28 @@ namespace LinkedListOperations
         }
 
         //search and delete method
-        public int DeleteInBetween(int data)
+
+        public int DeleteInBetween(int value)
         {
-            Node temp = Search(data);
-            Console.WriteLine("Data {0} has been deleted from linked list", temp.data);
-            temp.next = temp.next.next;
+            Node temp = head;
+            
+            
+            if (temp == null)
+            {
+                Console.WriteLine("Linked List is empty");
+                int size = Size();
+                return size;
+            }
+            while (temp.next != null)
+            {
+                if (temp.next.data == value)
+                {
+                    temp.next = temp.next.next;
+                    Console.WriteLine("The value " + value + " is deleted from the list");
+                }
+                temp = temp.next;
+            }
+
             int sizeofList = Size();
             return sizeofList;
         }

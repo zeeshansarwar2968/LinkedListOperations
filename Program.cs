@@ -16,7 +16,7 @@ namespace LinkedListOperations
             Console.WriteLine("6.Searching the Element");
             Console.WriteLine("7.Searching and Inserting an Element");
             Console.WriteLine("8.Searching and Deleting an Element");
-
+            Console.WriteLine("9.Sorting the List in ascending order");
             Console.WriteLine("");
 
 
@@ -102,9 +102,11 @@ namespace LinkedListOperations
                     case 8:
                         obj.InsertLast(56);
                         obj.InsertLast(30);
+                        //obj.InsertLast(30);
+                        //obj.InsertLast(67);
                         obj.InsertLast(40);
                         obj.InsertLast(70);
-                        obj.DeleteInBetween(40);
+                        Console.WriteLine("The size of list is : "+obj.DeleteInBetween(40));
                         obj.Display();
                         break;
                     case 9:
